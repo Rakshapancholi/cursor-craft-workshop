@@ -80,7 +80,7 @@ export function MdTabs({
   tabs: { label: string; file: string; body: string }[];
 }) {
   const [active, setActive] = useState(0);
-  const tab = tabs[active];
+  const tab = tabs[active] ?? tabs[0];
 
   return (
     <div className="md-tabs">

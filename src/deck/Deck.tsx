@@ -94,7 +94,7 @@ export function Deck({ slides }: { slides: Slide[] }) {
   const [notes, setNotes] = useState(false);
   const [fullscreen, setFullscreen] = useState(() => Boolean(fsElement()));
 
-  const slide = slides[index];
+  const slide = slides[index] ?? slides[0]!;
   const total = slides.length;
 
   const go = useCallback(
