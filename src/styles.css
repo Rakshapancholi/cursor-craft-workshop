@@ -145,19 +145,19 @@
 
 /* ===== UX Cursor Workshop deck styles (ported from ux-cursor-workshop) ===== */
 :root {
-  --bg: #000000;
-  --bg-2: #0a0a0a;
-  --ink: #f5f5f5;
-  --muted: #a3a3a3;
-  --dim: #737373;
-  --accent-orange: #ff6e45;
-  --accent-pink: #ff6b9d;
-  --accent-blue: #3d9aff;
+  --bg: #07061a;
+  --bg-2: #0d0b22;
+  --ink: #f3f0ff;
+  --muted: #b4aed0;
+  --dim: #7a7396;
+  --accent-orange: #c4a5ff;
+  --accent-pink: #e09cff;
+  --accent-blue: #8f9bff;
   --hi: var(--accent-orange);
-  --line: rgba(255, 255, 255, 0.12);
-  --card: #111111;
-  --display: "Syne", sans-serif;
-  --sans: "Outfit", sans-serif;
+  --line: rgba(196, 165, 255, 0.14);
+  --card: rgba(255, 255, 255, 0.035);
+  --display: "Plus Jakarta Sans", sans-serif;
+  --sans: "Plus Jakarta Sans", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --space-1: 4px;
   --space-2: 8px;
@@ -544,7 +544,7 @@ a {
 .card-accent,
 .card-good,
 .card-warn {
-  background: #141414;
+  background: #141130;
   border-color: color-mix(in srgb, var(--hi) 45%, transparent);
 }
 
@@ -587,13 +587,13 @@ a {
 }
 
 .talk-avatar-x {
-  background: #1a1a1a;
+  background: #1a1638;
   color: #fff;
   border: 1px solid var(--line);
 }
 
 .talk-avatar-in {
-  background: #262626;
+  background: #2a2450;
   color: #fff;
 }
 
@@ -696,7 +696,7 @@ a {
 }
 
 .code-block {
-  background: #0a0a0a;
+  background: #0d0b22;
   border: 1px solid var(--line);
   border-radius: var(--space-6);
   overflow: hidden;
@@ -863,12 +863,12 @@ a {
 }
 
 .compare-bad {
-  background: #0a0a0a;
+  background: #0d0b22;
   border-color: rgba(255, 255, 255, 0.1);
 }
 
 .compare-good {
-  background: color-mix(in srgb, var(--hi) 12%, #111);
+  background: color-mix(in srgb, var(--hi) 12%, #0d0b22);
   border-color: var(--hi);
 }
 
@@ -939,7 +939,7 @@ a {
   min-height: 44px;
   padding: var(--space-3) var(--space-6);
   border-radius: 999px;
-  background: #1a1a1a;
+  background: #1a1638;
   border: 1px solid var(--line);
   font-size: 20px;
 }
@@ -947,7 +947,7 @@ a {
 .callout {
   padding: var(--space-6) var(--space-8);
   border-left: 4px solid var(--hi);
-  background: #141414;
+  background: #141130;
   border-radius: 0 var(--space-4) var(--space-4) 0;
   font-size: 24px;
   line-height: var(--leading);
@@ -1083,7 +1083,7 @@ a {
   overflow: hidden;
   border-radius: 48px;
   border: 1px solid var(--line);
-  background: #0a0a0a;
+  background: #0d0b22;
 }
 
 .phone-choice {
@@ -1130,7 +1130,7 @@ a {
   object-position: 50% 0;
   border-radius: var(--space-4);
   border: 1px solid var(--line);
-  background: #0a0a0a;
+  background: #0d0b22;
   display: block;
 }
 
@@ -1227,7 +1227,7 @@ a {
   padding: var(--space-6);
   border: 2px solid var(--hi);
   border-radius: var(--space-4);
-  background: #0a0a0a;
+  background: #0d0b22;
 }
 
 .cursor-pane-window strong {
@@ -1266,7 +1266,7 @@ a {
   display: block;
   padding: var(--space-4);
   border-radius: var(--space-3);
-  background: #141414;
+  background: #141130;
   color: var(--ink);
   font-size: 20px;
   line-height: var(--leading);
@@ -1363,7 +1363,7 @@ a {
   border: 1px solid var(--line);
   border-radius: var(--space-6);
   overflow: hidden;
-  background: #0a0a0a;
+  background: #0d0b22;
 }
 
 .browser-bar {
@@ -1477,7 +1477,7 @@ a {
 }
 
 .mini-saas nav .is-on {
-  background: #262626;
+  background: #2a2450;
   color: var(--ink);
 }
 
@@ -1981,7 +1981,7 @@ kbd {
   padding: var(--space-1) var(--space-2);
   border-radius: var(--space-1);
   border: 1px solid var(--line);
-  background: #0a0a0a;
+  background: #0d0b22;
 }
 
 .overlay-hint {
@@ -2013,7 +2013,7 @@ kbd {
 
 .overview-grid button.is-current {
   border-color: var(--hi);
-  background: #1a1a1a;
+  background: #1a1638;
 }
 
 .overview-grid span {
@@ -2057,4 +2057,24 @@ kbd {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ===== Studio Orbis glow theme ===== */
+.stage {
+  background:
+    radial-gradient(60% 50% at 85% 10%, rgba(140, 90, 255, 0.22), transparent 70%),
+    radial-gradient(50% 45% at 5% 95%, rgba(90, 80, 255, 0.16), transparent 70%),
+    radial-gradient(40% 40% at 50% 50%, rgba(196, 165, 255, 0.05), transparent 70%),
+    var(--bg);
+}
+.display { letter-spacing: -0.035em; font-weight: 600; }
+.display em, .display strong, .display .hi {
+  background: linear-gradient(100deg, #e9dcff, #b18cff 55%, #8f9bff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.kicker { letter-spacing: 0.32em; }
+.card, [class*="card"] {
+  backdrop-filter: blur(18px);
+  border-color: var(--line);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 30px 80px -40px rgba(140,90,255,0.45);
 }
