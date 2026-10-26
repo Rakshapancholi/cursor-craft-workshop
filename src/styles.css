@@ -2090,7 +2090,10 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 }
 .stage strong { color: #ff8cbc; }
 .kicker { color: #ff8cbc; font-weight: 600; }
-.stage::after {
-  content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(45% 40% at 15% 10%, rgba(255,111,168,0.14), transparent 70%);
+.stage {
+  background:
+    radial-gradient(45% 40% at 12% 8%, rgba(255,111,168,0.16), transparent 70%),
+    radial-gradient(60% 50% at 85% 10%, rgba(140,90,255,0.22), transparent 70%),
+    radial-gradient(50% 45% at 5% 95%, rgba(90,80,255,0.16), transparent 70%),
+    var(--bg);
 }
