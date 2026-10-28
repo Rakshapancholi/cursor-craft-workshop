@@ -975,6 +975,102 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
     ),
   },
   {
+    id: "market-2026",
+    section: "4. Portfolio",
+    notes: "Fewer easy junior openings, but a clearer path. Figures are directional, not an exact global total.",
+    render: () => (
+      <>
+        <Lead>Market data: 2022 vs 2026</Lead>
+        <Display size="md">
+          From expansion to <em>selective</em>
+        </Display>
+        <Grid cols={3}>
+          <Card kicker="Team growth" title="71% → flat" body="71% of design managers hired in 2022. ~5,700 open roles globally in early 2026, flat since 2023." />
+          <Card tone="warn" kicker="Junior hiring" title="25% vs 56%" body="Only 25% of hiring managers want more juniors; 56% want more seniors." />
+          <Card tone="good" kicker="AI in workflow" title="72%" body="of surveyed designers use generative AI tools. Fluency is becoming expected." />
+        </Grid>
+        <Callout>
+          2,836 exact “Product Designer” postings and 11,562 broader Product / UI-UX postings in 90 days (2026). Demand exists, spread across hybrid titles.
+        </Callout>
+      </>
+    ),
+  },
+  {
+    id: "jd-changed",
+    section: "4. Portfolio",
+    notes: "2022 judged screens and handoff. 2026 judges connecting insight, goals, constraints and a testable solution.",
+    render: () => (
+      <>
+        <Lead>How the job description changed</Lead>
+        <Display size="md">
+          Design it → <em>ship it</em>
+        </Display>
+        <Grid>
+          <Card
+            kicker="2022"
+            title="Design the product experience"
+            body={
+              <ul>
+                <li>Research, wireframes, hi-fi UI, handoff</li>
+                <li>Output: a polished Figma file and spec</li>
+                <li>Join PMs and engineers after requirements</li>
+                <li>AI rarely mentioned; judged on visual craft</li>
+              </ul>
+            }
+          />
+          <Card
+            tone="good"
+            kicker="2026"
+            title="Shape, prototype, help ship"
+            body={
+              <ul>
+                <li>Problem framing, AI exploration, implementation</li>
+                <li>Output: tested prototype, rationale, shipped change</li>
+                <li>With PMs and engineers through discovery and delivery</li>
+                <li>Craft plus impact, trade-offs and user evidence</li>
+              </ul>
+            }
+          />
+        </Grid>
+      </>
+    ),
+  },
+  {
+    id: "hired-1",
+    section: "4. Portfolio",
+    notes: "Stop trying to look experienced. Prove you can find a real problem and decide under constraints.",
+    render: () => (
+      <>
+        <Lead>What gets new designers hired · 1–3</Lead>
+        <Display size="md">
+          Proof over <em>polish</em>
+        </Display>
+        <Grid cols={3}>
+          <Card kicker="01" title="Three strong projects, not ten weak" body="Problem, user, constraints, decisions, iterations, outcome, learning. Show why, not just final screens." />
+          <Card kicker="02" title="Use real constraints" body="A local tiffin service, clinic, coaching center or college club beats a fictional big-app redesign." />
+          <Card kicker="03" title="Show your contribution" body="“I ran five interviews, redesigned onboarding, built the UI and tested two versions with eight users.”" />
+        </Grid>
+      </>
+    ),
+  },
+  {
+    id: "hired-2",
+    section: "4. Portfolio",
+    notes: "Replace 'I improved UX' with a concrete before and after.",
+    render: () => (
+      <>
+        <Lead>What gets new designers hired · 4–5</Lead>
+        <Display size="md">
+          Judgment you can <em>explain</em>
+        </Display>
+        <Grid>
+          <Card kicker="04" title="Make AI an advantage" body="Use it for synthesis, copy, UI exploration, prototyping. Document what you rejected and the human judgment you added." />
+          <Card kicker="05" title="Speak product and business" body="Explain choices for users, PMs and engineers. Show trade-offs, edge cases, accessibility and measurable results." />
+        </Grid>
+      </>
+    ),
+  },
+  {
     id: "honest",
     section: "4. Portfolio",
     notes: "Give them a sentence they can actually use.",
