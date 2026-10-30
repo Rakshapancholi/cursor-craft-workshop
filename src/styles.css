@@ -2234,3 +2234,6 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .stage:has(.light-mark) .lead, .stage:has(.light-mark) p { color: #3f4a56; }
 .stage:has(.light-mark) .chrome-top, .stage:has(.light-mark) .chrome-top * { color: #6b6d69; }
 .stage:has(.light-mark) .arrow-orb { color: #101112; }
+.stage .grid-1 { display: grid; grid-template-columns: 1fr; }
+.with-photo .grid-1 { gap: 16px; margin-top: 24px; }
+.with-photo .card { padding: 22px 26px; }

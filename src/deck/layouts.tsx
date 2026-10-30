@@ -27,7 +27,7 @@ export function Grid({
   children,
   gap = "md",
 }: {
-  cols?: 2 | 3 | 4;
+  cols?: 1 | 2 | 3 | 4;
   children: ReactNode;
   gap?: "sm" | "md" | "lg";
 }) {
