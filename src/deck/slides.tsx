@@ -30,6 +30,18 @@ import {
   Waveform,
 } from "./layouts";
 
+import studioImg from "@/assets/people-studio.jpg";
+import hiringImg from "@/assets/people-hiring.jpg";
+import userImg from "@/assets/people-user.jpg";
+
+function Photo({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className="human-photo">
+      <img src={src} alt={alt} width={1024} height={1280} loading="lazy" />
+    </figure>
+  );
+}
+
 export const slides: Slide[] = [
   {
     id: "title",
@@ -47,7 +59,7 @@ export const slides: Slide[] = [
           <DotPair />
           <ArrowOrb />
         </GfxRow>
-        <Lead>Bring your ideas to life with Cursor</Lead>
+        <Lead>AI can build anything. Designers decide what is worth building.</Lead>
         <p className="byline">Vittesh · Studio Orbis</p>
       </>
     ),
@@ -85,6 +97,7 @@ export const slides: Slide[] = [
     notes: "Read this slowly. It is the spine of the whole workshop.",
     render: () => (
       <>
+        <span className="light-mark" hidden />
         <Lead>AI helps you build faster</Lead>
         <Display>
           Your design skills help you
@@ -97,6 +110,29 @@ export const slides: Slide[] = [
         </GfxRow>
         <Lead>Your portfolio proves you can do both</Lead>
       </>
+    ),
+  },
+  {
+    id: "why-here",
+    section: "Welcome",
+    notes: "The whole workshop in one sentence: taste plus a written system plus Cursor equals real product.",
+    render: () => (
+      <div className="with-photo">
+        <div>
+          <Lead>Why this workshop exists</Lead>
+          <Display size="md">
+            Taste, written down,
+            <br />
+            becomes <em>product</em>
+          </Display>
+          <Grid cols={1} gap="md">
+            <Card kicker="01 · Taste" title="Know what good looks like" body="Your judgment is the part AI cannot average out." />
+            <Card kicker="02 · System" title="Write it so it can run without you" body="Rules, tokens and a never-list the agent must follow." />
+            <Card kicker="03 · Ship" title="Build it live in Cursor" body="From empty folder to a working app, today." />
+          </Grid>
+        </div>
+        <Photo src={studioImg} alt="Designers reviewing a build together" />
+      </div>
     ),
   },
   {
@@ -464,6 +500,28 @@ export const slides: Slide[] = [
           <em>system</em>
         </Display>
       </>
+    ),
+  },
+  {
+    id: "real-person",
+    section: "2. Systems",
+    notes: "Every decision in the Wallet app exists for one person checking their money at night.",
+    render: () => (
+      <div className="with-photo">
+        <div>
+          <Lead>Design for a person, not a prompt</Lead>
+          <Display size="md">
+            Someone checks their budget
+            <br />
+            at <em>11pm</em>
+          </Display>
+          <Grid cols={1} gap="md">
+            <Card kicker="Glance" title="One number, instantly" body="How much is left this month. Nothing else competes." />
+            <Card kicker="Trust" title="Calm, honest status" body="“On track” in sage. Red only when it truly matters." />
+          </Grid>
+        </div>
+        <Photo src={userImg} alt="A person checking a budget app on their phone" />
+      </div>
     ),
   },
   {
@@ -971,6 +1029,7 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
         <Display size="md">
           Portfolio & <em>hiring</em>
         </Display>
+        <p className="lead">Prove judgment, not just pixels</p>
       </TopicSlide>
     ),
   },
@@ -980,7 +1039,7 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
     notes: "Fewer easy junior openings, but a clearer path. Figures are directional, not an exact global total.",
     render: () => (
       <>
-        <Lead>Market data: 2022 vs 2026</Lead>
+        <Lead>The market changed. Here is how</Lead>
         <Display size="md">
           From expansion to <em>selective</em>
         </Display>
@@ -1059,14 +1118,19 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
     notes: "Replace 'I improved UX' with a concrete before and after.",
     render: () => (
       <>
+      <div className="with-photo">
+      <div>
         <Lead>What gets new designers hired · 4–5</Lead>
         <Display size="md">
           Judgment you can <em>explain</em>
         </Display>
-        <Grid>
+        <Grid cols={1} gap="md">
           <Card kicker="04" title="Make AI an advantage" body="Use it for synthesis, copy, UI exploration, prototyping. Document what you rejected and the human judgment you added." />
           <Card kicker="05" title="Speak product and business" body="Explain choices for users, PMs and engineers. Show trade-offs, edge cases, accessibility and measurable results." />
         </Grid>
+      </div>
+      <Photo src={hiringImg} alt="A designer walking a hiring manager through her portfolio" />
+      </div>
       </>
     ),
   },
