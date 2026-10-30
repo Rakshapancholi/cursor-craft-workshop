@@ -2237,3 +2237,5 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .stage .grid-1 { display: grid; grid-template-columns: 1fr; }
 .with-photo .grid-1 { gap: 16px; margin-top: 24px; }
 .with-photo .card { padding: 22px 26px; }
+.stage .card [class*="card-"], .stage:has(video, img[src*=".gif"], .section-slide) .card [class*="card-"] { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0; border-radius: 0; }
+.stage .card { display: flex; flex-direction: column; gap: 8px; }
