@@ -481,7 +481,7 @@ export const slides: Slide[] = [
         <div className="phone-row">
           <div className="phone-choice">
             <p className="shot-label">Screen A</p>
-            <PhoneShot src="/phone-system.png?v=3" alt="Screen A, home app" />
+            <PhoneShot src="/__l5e/assets-v1/ff1339ba-1ddd-4920-b612-17f6ea3bad8a/wallet-app.png" alt="Screen A, home app" />
           </div>
           <div className="phone-choice">
             <p className="shot-label">Screen B</p>
@@ -498,7 +498,7 @@ export const slides: Slide[] = [
       "Reveal Screen A first. This is the one with a system. Walk the written rules.",
     render: () => (
       <div className="phone-split">
-        <PhoneShot src="/phone-system.png?v=3" alt="Directed home app" />
+        <PhoneShot src="/__l5e/assets-v1/ff1339ba-1ddd-4920-b612-17f6ea3bad8a/wallet-app.png" alt="Directed home app" />
         <div>
           <Lead>Every decision written down, so it becomes checkable</Lead>
           <Display size="md">
