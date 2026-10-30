@@ -2189,7 +2189,7 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .stage .display em, .stage .display strong, .stage .display .hi { color: #a5d6b7 !important; }
 .stage .lead { color: #d4d6d1; font-weight: 500; }
 .stage .kicker { color: #0c0d0c; background: #a5d6b7; border-color: transparent; font-weight: 600; }
-.stage .card, .stage:has(video, img[src*=".gif"], .section-slide) .card {
+.stage .card, .stage:where(:has(video, img[src*=".gif"], .section-slide)) .card {
   background: #191a18 !important;
   border: 1px solid #3d3f39 !important;
   backdrop-filter: none !important;
@@ -2237,3 +2237,5 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .with-photo .card { padding: 22px 26px; }
 .stage .card [class*="card-"], .stage:has(video, img[src*=".gif"], .section-slide) .card [class*="card-"] { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0; border-radius: 0; }
 .stage .card { display: flex; flex-direction: column; gap: 8px; }
+
+.stage .display em, .stage .display .hi { background: none !important; padding: 0 !important; }
