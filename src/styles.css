@@ -2189,22 +2189,20 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .stage .display em, .stage .display strong, .stage .display .hi { color: #a5d6b7 !important; }
 .stage .lead { color: #d4d6d1; font-weight: 500; }
 .stage .kicker { color: #0c0d0c; background: #a5d6b7; border-color: transparent; font-weight: 600; }
-.stage .card, .stage [class*="card"],
-.stage:has(video, img[src*=".gif"], .section-slide) .card,
-.stage:has(video, img[src*=".gif"], .section-slide) [class*="card"] {
+.stage .card, .stage:has(video, img[src*=".gif"], .section-slide) .card {
   background: #191a18 !important;
   border: 1px solid #3d3f39 !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
   box-shadow: 0 12px 24px rgba(0,0,0,0.35);
 }
-.stage .card *, .stage [class*="card"] * { -webkit-text-fill-color: currentColor; }
+.stage .card * { -webkit-text-fill-color: currentColor; }
 .stage .card-kicker, .stage .card-num {
   color: #a5d6b7 !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
 }
 .stage .card-title { color: #fff !important; font-weight: 600; font-size: clamp(28px, 2vw, 40px); line-height: 1.15; }
 .stage .card-body { color: #c9cbc6 !important; line-height: 1.4; }
-.stage .card-accent, .stage .card-good { background: #a5d6b7 !important; border-color: #a5d6b7 !important; }
+.stage .card.card-accent, .stage .card.card-good { background: #a5d6b7 !important; border-color: #a5d6b7 !important; }
 .stage .card-accent *, .stage .card-good * { color: #0c0d0c !important; }
 .stage .card-warn { border-color: #ff6a7f !important; }
 .stage .card-warn .card-kicker { color: #ff6a7f !important; }
