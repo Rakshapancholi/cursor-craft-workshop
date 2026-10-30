@@ -2171,3 +2171,66 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
   background: rgba(242, 242, 242, 0.06); border-color: #3d3f39; box-shadow: none;
 }
 .stage:has(video, img[src*=".gif"], .section-slide) .arrow-orb { color: #fff; }
+
+/* ===== FINAL: Ink dark default, solid cards, strong hierarchy ===== */
+.stage {
+  --bg: #0c0d0c;
+  --ink: #ffffff;
+  --muted: #d4d6d1;
+  --dim: #a3a59f;
+  --line: #3d3f39;
+  --sage-solid: #a5d6b7;
+  background: radial-gradient(70% 60% at 50% 0%, #1f211e 0%, #0c0d0c 70%) !important;
+  color: #fff;
+}
+.stage p, .stage li { color: #d4d6d1; }
+.stage strong { color: #fff; font-weight: 600; }
+.stage .display { color: #fff; font-weight: 600; }
+.stage .display em, .stage .display strong, .stage .display .hi { color: #a5d6b7 !important; }
+.stage .lead { color: #d4d6d1; font-weight: 500; }
+.stage .kicker { color: #0c0d0c; background: #a5d6b7; border-color: transparent; font-weight: 600; }
+.stage .card, .stage [class*="card"],
+.stage:has(video, img[src*=".gif"], .section-slide) .card,
+.stage:has(video, img[src*=".gif"], .section-slide) [class*="card"] {
+  background: #191a18 !important;
+  border: 1px solid #3d3f39 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+.stage .card *, .stage [class*="card"] * { -webkit-text-fill-color: currentColor; }
+.stage .card-kicker, .stage .card-num {
+  color: #a5d6b7 !important; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.stage .card-title { color: #fff !important; font-weight: 600; font-size: clamp(28px, 2vw, 40px); line-height: 1.15; }
+.stage .card-body { color: #c9cbc6 !important; line-height: 1.4; }
+.stage .card-accent, .stage .card-good { background: #a5d6b7 !important; border-color: #a5d6b7 !important; }
+.stage .card-accent *, .stage .card-good * { color: #0c0d0c !important; }
+.stage .card-warn { border-color: #ff6a7f !important; }
+.stage .card-warn .card-kicker { color: #ff6a7f !important; }
+.stage .callout { background: #191a18; border: 1px solid #3d3f39; border-left: 4px solid #a5d6b7; color: #fff; backdrop-filter: none; }
+.stage .giant-num, .stage .year-word { color: #a5d6b7; }
+.stage .arrow-orb { color: #fff; border-color: #5b5d58; }
+.stage .chrome-top, .stage .chrome-top * { color: #a3a59f; }
+.stage .shot-label { color: #fff; }
+.stage code, .stage pre { color: #e8e9e6; }
+
+/* Phone: show full app, never crop */
+.phone-shot, .phone-choice .phone-shot, .phone-split .phone-shot {
+  height: auto !important; aspect-ratio: auto; background: #0c0d0c; border-color: #3d3f39;
+}
+.phone-shot img { height: auto !important; max-height: 760px; object-fit: contain !important; }
+
+/* Human photos */
+.human-photo { margin: 0; border-radius: 24px; overflow: hidden; border: 1px solid #3d3f39; }
+.human-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.with-photo { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+.with-photo .human-photo { height: 620px; }
+
+/* Light accent slides (opt-in) */
+.stage:has(.light-mark) { background: #f9f9f8 !important; color: #101112; }
+.stage:has(.light-mark) .display, .stage:has(.light-mark) strong { color: #101112; }
+.stage:has(.light-mark) .display em { color: #4f8a66 !important; }
+.stage:has(.light-mark) .lead, .stage:has(.light-mark) p { color: #3f4a56; }
+.stage:has(.light-mark) .chrome-top, .stage:has(.light-mark) .chrome-top * { color: #6b6d69; }
+.stage:has(.light-mark) .arrow-orb { color: #101112; }
