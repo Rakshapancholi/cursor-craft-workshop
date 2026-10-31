@@ -30,9 +30,15 @@ import {
   Waveform,
 } from "./layouts";
 
-import studioImg from "@/assets/people-studio.jpg";
-import hiringImg from "@/assets/people-hiring.jpg";
-import userImg from "@/assets/people-user.jpg";
+import studioAsset from "@/assets/bw-team.png.asset.json";
+import hiringAsset from "@/assets/bw-desk.png.asset.json";
+import userAsset from "@/assets/bw-laptop.png.asset.json";
+import cursorLogo from "@/assets/cursor-logo.png.asset.json";
+import { LineArt } from "./lineart";
+
+const studioImg = studioAsset.url;
+const hiringImg = hiringAsset.url;
+const userImg = userAsset.url;
 
 function Photo({ src, alt }: { src: string; alt: string }) {
   return (
@@ -49,6 +55,7 @@ export const slides: Slide[] = [
     notes: "Hosts introduce Vittesh. Sit with the title. Then a short about-me, then the promise.",
     render: () => (
       <>
+        <LineArt variant="orbit" />
         <GiantNum>01</GiantNum>
         <Display>
           Design right!
@@ -97,7 +104,7 @@ export const slides: Slide[] = [
     notes: "Read this slowly. It is the spine of the whole workshop.",
     render: () => (
       <>
-        <span className="light-mark" hidden />
+        <LineArt variant="venn" />
         <Lead>AI helps you build faster</Lead>
         <Display>
           Your design skills help you
@@ -241,6 +248,7 @@ export const slides: Slide[] = [
     notes: "Name the chapter. The average of the internet. Then the two screens.",
     render: () => (
       <TopicSlide>
+        <LineArt variant="rings" />
         <GfxYear num="01" word="Slop" />
         <Display size="md">
           The average of
@@ -397,6 +405,8 @@ export const slides: Slide[] = [
     section: "1. AI slop",
     notes: "Close the slop chapter. Then systems. Let the sphere loop.",
     render: () => (
+      <>
+      <span className="pure-black-mark" hidden />
       <Split
         ratio="1-1"
         left={
@@ -420,6 +430,7 @@ export const slides: Slide[] = [
           />
         }
       />
+      </>
     ),
   },
   {
@@ -428,6 +439,7 @@ export const slides: Slide[] = [
     notes: "The meme first. Rolling the sphere is the system. Then the definition.",
     render: () => (
       <TopicSlide>
+        <LineArt variant="capsule" />
         <Split
           left={
             <>
@@ -539,7 +551,7 @@ export const slides: Slide[] = [
         <div className="phone-row">
           <div className="phone-choice">
             <p className="shot-label">Screen A</p>
-            <PhoneShot src="/__l5e/assets-v1/ff1339ba-1ddd-4920-b612-17f6ea3bad8a/wallet-app.png" alt="Screen A, home app" />
+            <PhoneShot src="/phone-system.png?v=3" alt="Screen A, home app" />
           </div>
           <div className="phone-choice">
             <p className="shot-label">Screen B</p>
@@ -652,6 +664,8 @@ export const slides: Slide[] = [
     notes: "Only now. They should feel the delay on purpose.",
     render: () => (
       <TopicSlide>
+        <LineArt variant="planet" />
+        <img className="cursor-logo" src={cursorLogo.url} alt="Cursor logo" width={420} height={420} />
         <GfxYear num="03" word="Cursor" />
         <Display size="md">
           How Cursor
@@ -1025,6 +1039,7 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
     notes: "Honesty over mystique.",
     render: () => (
       <TopicSlide>
+        <LineArt variant="pair" />
         <GfxYear num="04" word="2026" />
         <Display size="md">
           Portfolio & <em>hiring</em>
