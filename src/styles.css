@@ -2324,3 +2324,5 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .stage:has(.cursor-logo) .topic-slide { background: transparent !important; border: 0 !important; box-shadow: none !important; }
 .stage .slide-body > .grid, .stage .slide-body > .rule-tiles, .stage .slide-body > .stat-cols { max-width: 1780px; box-sizing: border-box; }
 .rule-tile { border-radius: 0; }
+.stage.stage:has(.pure-black-mark) { background: #000 !important; background-image: none !important; }
+.stage:has(.pure-black-mark)::before, .stage:has(.pure-black-mark)::after { display: none !important; }
