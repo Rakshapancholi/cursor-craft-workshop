@@ -1,6 +1,8 @@
+import type { ReactElement } from "react";
+
 type Variant = "orbit" | "venn" | "rings" | "capsule" | "planet" | "pair";
 
-const shapes: Record<Variant, JSX.Element> = {
+const shapes: Record<Variant, ReactElement> = {
   orbit: (
     <>
       <circle cx="300" cy="300" r="220" />
