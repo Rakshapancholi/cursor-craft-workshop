@@ -2316,3 +2316,8 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 
 /* B&W photos */
 .human-photo img { filter: grayscale(1); }
+.stage:has(.cursor-logo) { background: #000 !important; }
+.cursor-logo { mix-blend-mode: normal; z-index: 0 !important; }
+.topic-slide > .line-art, .slide-body > .line-art { z-index: 0; }
+.stage .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.stage .talk-card { min-width: 0; }
