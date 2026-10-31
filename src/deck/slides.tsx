@@ -1058,14 +1058,28 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
         <Display size="md">
           From expansion to <em>selective</em>
         </Display>
-        <Grid cols={3}>
-          <Card kicker="Team growth" title="71% → flat" body="71% of design managers hired in 2022. ~5,700 open roles globally in early 2026, flat since 2023." />
-          <Card tone="warn" kicker="Junior hiring" title="25% vs 56%" body="Only 25% of hiring managers want more juniors; 56% want more seniors." />
-          <Card tone="good" kicker="AI in workflow" title="72%" body="of surveyed designers use generative AI tools. Fluency is becoming expected." />
-        </Grid>
-        <Callout>
-          2,836 exact “Product Designer” postings and 11,562 broader Product / UI-UX postings in 90 days (2026). Demand exists, spread across hybrid titles.
-        </Callout>
+        <div className="stat-cols">
+          <div className="stat-col">
+            <p className="stat-col-note">71% of design managers hired in 2022. About 5,700 open roles in early 2026, flat since 2023.</p>
+            <p className="stat-col-label">Team growth</p>
+            <p className="stat-col-num">71%<span>→ flat</span></p>
+          </div>
+          <div className="stat-col">
+            <p className="stat-col-note">Exact “Product Designer” postings in 90 days, plus 11,562 broader Product / UI-UX postings.</p>
+            <p className="stat-col-label">Postings · 2026</p>
+            <p className="stat-col-num">2,836<span>/ 11.5k</span></p>
+          </div>
+          <div className="stat-col">
+            <p className="stat-col-note">Only 25% of hiring managers want more juniors. 56% want more seniors.</p>
+            <p className="stat-col-label">Junior vs senior</p>
+            <p className="stat-col-num">25%<span>vs 56%</span></p>
+          </div>
+          <div className="stat-col">
+            <p className="stat-col-note">of surveyed designers use generative AI tools. Fluency is becoming expected.</p>
+            <p className="stat-col-label">AI in workflow</p>
+            <p className="stat-col-num">72%</p>
+          </div>
+        </div>
       </>
     ),
   },
@@ -1119,11 +1133,26 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
         <Display size="md">
           Proof over <em>polish</em>
         </Display>
-        <Grid cols={3}>
-          <Card kicker="01" title="Three strong projects, not ten weak" body="Problem, user, constraints, decisions, iterations, outcome, learning. Show why, not just final screens." />
-          <Card kicker="02" title="Use real constraints" body="A local tiffin service, clinic, coaching center or college club beats a fictional big-app redesign." />
-          <Card kicker="03" title="Show your contribution" body="“I ran five interviews, redesigned onboarding, built the UI and tested two versions with eight users.”" />
-        </Grid>
+        <div className="rule-cards">
+          <article className="rule-card">
+            <p className="rule-num">01</p>
+            <h3>Three strong projects, not ten weak</h3>
+            <p>Problem, user, constraints, decisions, iterations, outcome, learning. Show why, not just final screens.</p>
+            <span className="rule-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article className="rule-card">
+            <p className="rule-num">02</p>
+            <h3>Use real constraints</h3>
+            <p>A local tiffin service, clinic, coaching center or college club beats a fictional big-app redesign.</p>
+            <span className="rule-arrow" aria-hidden="true">↗</span>
+          </article>
+          <article className="rule-card rule-card-hero">
+            <p className="rule-num">03</p>
+            <h3>Show your contribution</h3>
+            <p>“I ran five interviews, redesigned onboarding, built the UI and tested two versions with eight users.”</p>
+            <span className="rule-arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
       </>
     ),
   },
