@@ -1133,20 +1133,20 @@ description: Build or restyle UI using DESIGN.md. Use when creating pages or sec
         <Display size="md">
           Proof over <em>polish</em>
         </Display>
-        <div className="rule-cards">
-          <article className="rule-card">
+        <div className="rule-tiles">
+          <article className="rule-tile">
             <p className="rule-num">01</p>
             <h3>Three strong projects, not ten weak</h3>
             <p>Problem, user, constraints, decisions, iterations, outcome, learning. Show why, not just final screens.</p>
             <span className="rule-arrow" aria-hidden="true">↗</span>
           </article>
-          <article className="rule-card">
+          <article className="rule-tile">
             <p className="rule-num">02</p>
             <h3>Use real constraints</h3>
             <p>A local tiffin service, clinic, coaching center or college club beats a fictional big-app redesign.</p>
             <span className="rule-arrow" aria-hidden="true">↗</span>
           </article>
-          <article className="rule-card rule-card-hero">
+          <article className="rule-tile rule-tile-hero">
             <p className="rule-num">03</p>
             <h3>Show your contribution</h3>
             <p>“I ran five interviews, redesigned onboarding, built the UI and tested two versions with eight users.”</p>

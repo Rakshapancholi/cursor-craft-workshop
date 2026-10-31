@@ -2303,16 +2303,16 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .stat-col-num span { font-size: 26px; margin-left: 10px; color: #cfcfcf; letter-spacing: 0; font-weight: 500; }
 
 /* Rule cards (bento with hero) */
-.rule-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; align-items: end; }
-.rule-card { position: relative; border: 1px solid #ffffff; padding: 36px; min-height: 440px; display: flex; flex-direction: column; background: #000; }
-.rule-card-hero { background: #fff; min-height: 520px; }
+.rule-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 48px; align-items: end; }
+.rule-tile { position: relative; border: 1px solid #ffffff; padding: 36px; min-height: 440px; display: flex; flex-direction: column; background: #000; }
+.rule-tile-hero { background: #fff; min-height: 520px; }
 .rule-num { font-size: 24px; letter-spacing: 0.12em; color: #b57bff !important; font-weight: 600; margin: 0; }
-.rule-card-hero .rule-num { color: #6d28d9 !important; }
-.rule-card h3 { font-size: 40px; line-height: 1.1; margin: 16px 0 auto; color: #fff; font-weight: 600; }
-.rule-card p:not(.rule-num) { font-size: 24px; line-height: 1.4; margin: 24px 0 0; padding-right: 40px; color: #e2e2e2; }
-.rule-card-hero h3, .rule-card-hero p:not(.rule-num) { color: #000 !important; }
+.rule-tile-hero .rule-num { color: #6d28d9 !important; }
+.rule-tile h3 { font-size: 40px; line-height: 1.1; margin: 16px 0 auto; color: #fff; font-weight: 600; }
+.rule-tile p:not(.rule-num) { font-size: 24px; line-height: 1.4; margin: 24px 0 0; padding-right: 40px; color: #e2e2e2; }
+.rule-tile-hero h3, .rule-tile-hero p:not(.rule-num) { color: #000 !important; }
 .rule-arrow { position: absolute; right: 28px; bottom: 24px; font-size: 36px; color: #fff; }
-.rule-card-hero .rule-arrow { color: #000; }
+.rule-tile-hero .rule-arrow { color: #000; }
 
 /* B&W photos */
 .human-photo img { filter: grayscale(1); }
@@ -2321,3 +2321,6 @@ html, body, #root { -webkit-font-smoothing: antialiased; text-rendering: optimiz
 .topic-slide > .line-art, .slide-body > .line-art { z-index: 0; }
 .stage .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .stage .talk-card { min-width: 0; }
+.stage:has(.cursor-logo) .topic-slide { background: transparent !important; border: 0 !important; box-shadow: none !important; }
+.stage .slide-body > .grid, .stage .slide-body > .rule-tiles, .stage .slide-body > .stat-cols { max-width: 1780px; box-sizing: border-box; }
+.rule-tile { border-radius: 0; }
